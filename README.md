@@ -26,7 +26,7 @@ Para executar o projeto siga os seguintes passos:
     DATABASE_PORT=
 
 ## Banco de dados
-O banco de dados padrão é o MySQL. Caso você prefira PostgreSQL, [clique aqui](https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-django-application-on-ubuntu-20-04).
+O banco de dados padrão é o MySQL. Caso você prefira PostgreSQL, [clique aqui](https://docs.djangoproject.com/en/4.1/ref/settings/#databases).
 
 ##  API URLS
 
