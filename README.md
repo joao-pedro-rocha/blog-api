@@ -1,6 +1,6 @@
 #  Blog API
 <fig>
-<img src="https://rockcontent.com/br/wp-content/uploads/sites/2/elementor/thumbs/modelo-de-projeto-p2he6clp7uhmwqd16ikv9jgz30a5liixoon908hej0.png" alt="Uma imagem relacionada ao projeto">
+<img src="https://rockcontent.com/br/wp-content/uploads/sites/2/elementor/thumbs/modelo-de-projeto-p2he6clp7uhmwqd16ikv9jgz30a5liixoon908hej0.png">
 </fig>
 
 ## Inicialização
@@ -8,15 +8,15 @@ Para executar o projeto siga os seguintes passos:
  - crie um ambiente virtual Python. [Clique
    aqui](https://docs.python.org/3/library/venv.html) caso não saiba
    criar um. 
- - git clone;
+ - git clone https://github.com/joao-pedro-rocha/blog-api.git;
  - `pip install -r requirements.txt`;
  - crie um arquivo .env e o edite como na sessão _Variáveis de ambiente_;
  - `python manage.py makemigrations`
  - `python manage.py migrate`;
+ - `python manage.py createsuperuser`
  - `python manage.py runserver`;
 
 ## Variáveis de ambiente
-
     SECRET_KEY=
     DEBUG=
     DATABASE_NAME=
