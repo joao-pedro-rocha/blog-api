@@ -1,0 +1,31 @@
+{% extends 'post_base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <h1>{{ post.title }}</h1>
+    <p>{{ post.text }}</p>
+    <br>
+    <h2>Comments</h2>
+    {% for comment in comments %}
+        <div class="list-group">
+            <div class="list-group-item list-group-item-action">
+                <span class="badge bg-secondary mr-5">{{ comment.likes }} Likes</span>
+                <div class="d-flex w-100 justify-content-left">
+                    <h5 class="mb-1">{{ comment.email }}</h5>
+                </div>
+                <p class="mb-1">{{ comment.text }}</p>
+                <a class="btn btn-primary" href="{% url 'increment-like' comment_id=comment.id post_id=post.id %}">Like</a>
+            </div>
+        </div>
+    {% endfor %}
+    <br>
+    <div class="card-body">
+        <h3>Deixe um comentário</h3>
+        <form method="post" style="margin-top: 1.3em;">
+            {% csrf_token %}
+            {{ comment_form|crispy }}
+            <br>
+            <button type="submit" class="btn btn-primary">enviar</button>
+        </form>
+    </div>
+{% endblock content %}
